@@ -7,7 +7,7 @@ WORKDIR /app
 RUN apk add --no-cache git
 
 # Copy go.mod first
-COPY go.mod ./
+COPY go.mod go.sum ./
 
 # Initialize the module and download dependencies
 RUN go mod tidy && go mod download
